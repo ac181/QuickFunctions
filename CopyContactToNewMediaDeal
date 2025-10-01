@@ -1,0 +1,7 @@
+void automation.CopyContactToNewMediaDeal(Int old_dealID,Int new_dealID)
+{
+old_deal = zoho.crm.getRecordById("Deals",old_dealID);
+contact_name = old_deal.get("Contact_Name");
+update_response = zoho.crm.updateRecord("Deals",new_dealID,{"Contact_Name":contact_name});
+info update_response;
+}
